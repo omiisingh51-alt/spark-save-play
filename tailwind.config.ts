@@ -57,6 +57,27 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Neon colors for the app
+        neon: {
+          blue: "hsl(var(--neon-blue))",
+          purple: "hsl(var(--neon-purple))", 
+          teal: "hsl(var(--neon-teal))",
+          green: "hsl(var(--neon-green))",
+          coral: "hsl(var(--neon-coral))",
+          pink: "hsl(var(--neon-pink))",
+        },
+        // Status colors
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
