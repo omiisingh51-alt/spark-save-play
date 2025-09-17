@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { WalletCard } from "./WalletCard";
-import { QuickActions } from "./QuickActions";
-import { GoalSaverCard } from "./GoalSaverCard";
-import { ExpenditureSnapshot } from "./ExpenditureSnapshot";
+import { WalletCard } from "../WalletCard";
+import { QuickActions } from "../QuickActions";
+import { GoalSaverCard } from "../GoalSaverCard";
+import { ExpenditureSnapshot } from "../ExpenditureSnapshot";
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Flame } from "lucide-react";
 
-export const Dashboard = () => {
+export const HomeScreen = () => {
   const [currentStreak, setCurrentStreak] = useState(7);
   
   return (

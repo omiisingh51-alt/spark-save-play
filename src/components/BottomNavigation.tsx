@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Home, Wallet, Target, PieChart, Settings } from "lucide-react";
 
 interface NavItem {
@@ -16,8 +15,12 @@ const navItems: NavItem[] = [
   { id: "settings", label: "Settings", icon: Settings }
 ];
 
-export const BottomNavigation = () => {
-  const [activeTab, setActiveTab] = useState("home");
+interface BottomNavigationProps {
+  activeTab: string;
+  onTabChange: (tab: string) => void;
+}
+
+export const BottomNavigation = ({ activeTab, onTabChange }: BottomNavigationProps) => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50">
@@ -31,10 +34,10 @@ export const BottomNavigation = () => {
               return (
                 <button
                   key={item.id}
-                  onClick={() => setActiveTab(item.id)}
+                  onClick={() => onTabChange(item.id)}
                   className={`
                     relative flex flex-col items-center gap-1 p-3 rounded-2xl transition-all duration-300
-                    ${isActive 
+                    ${activeTab === item.id 
                       ? 'bg-gradient-primary glow-primary scale-110' 
                       : 'hover:bg-white/5'
                     }
